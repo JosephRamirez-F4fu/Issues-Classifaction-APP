@@ -1,0 +1,61 @@
+        body {
+            background-color: #333; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr 200px; /* Barra lateral izquierda, contenido principal, barra lateral derecha */
+            grid-template-areas: "left content right";
+         /* Nombres de áreas */
+            grid-gap: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #3498db; /* Azul */
+            padding: 10px;
+        }
+
+        button {
+            grid-area: content; /* Los botones en el área de contenido */
+            background-color: #555; /* Gris oscuro */
+            color: #fff; /* Texto blanco */
+            width: 150px; /* Ancho fijo */
+            height: 70px; /* Altura fija */
+            border: none;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3498db; /* Azul al pasar el cursor */
+        }
+
+        .sidebar-left {
+            grid-area: left; /* Barra lateral izquierda */
+            background-color: #222; /* Fondo gris oscuro */
+            padding: 10px;
+        }
+
+        .sidebar-right {
+            grid-area: right; /* Barra lateral derecha */
+            background-color: #222; /* Fondo gris oscuro */
+            padding: 10px;
+        }
+
+        .grid-container{
+            grid-area: content;
+        }
+        .grid{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .active{
+            background-color: #1c8a28; /
+        }

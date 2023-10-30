@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issues Detector</title>
+    <link rel="stylesheet" href="/static/CSS/style.css">
+</head>
+<body>
+ <h1>Issues Detector</h1>
+<div class="container">
+    <div class="sidebar-left">
+        <p> selecciona los sintomas que padeces </p>
+        <p id="counter"> sintomas seleccionados 0 </p>
+
+    </div>
+    <div class="grid-container">
+        <div class="grid">
+            {% for index, element in symptoms_spanish %}
+                <button id="{{ index }}">{{ element }}</button>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="sidebar-right">
+        <p> Diagnostico</p>
+        <button onclick="send_symptoms()" >Empezar diagnostico</button>
+        <div id="result"></div>
+    </div>
+</div>
+<script src="/static/JS/app.js"></script>
+</body>
+</html>
